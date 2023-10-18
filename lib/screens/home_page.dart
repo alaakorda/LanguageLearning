@@ -13,10 +13,10 @@ class HomeScreen extends StatelessWidget {
       ),
       body: Column(
         children: [
-          Category('Members', Color(0XFFFA9532)),
-          Category('Family Members',Color(0XFF5A8345)),
-          Category('Colors', Color(0XFF7E3FA3)),
-          Category('Phrases', Color(0XFF48A5CC)),
+          Category('Members', Color(0XFFFA9532), () {}),
+          Category('Family Members',Color(0XFF5A8345), () {}),
+          Category('Colors', Color(0XFF7E3FA3), () {}),
+          Category('Phrases', Color(0XFF48A5CC), () {}),
 
         ],
       ),

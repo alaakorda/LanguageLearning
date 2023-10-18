@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:languagelearning/screens/home_page.dart';
+import 'package:languagelearning/screens/numbers_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -14,7 +15,7 @@ class MyApp extends StatelessWidget {
    
     return MaterialApp(
        debugShowCheckedModeBanner: false,
-        home: HomeScreen(),
+        home: NumbersScreen(),
     );
   }
 }

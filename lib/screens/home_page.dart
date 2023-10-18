@@ -14,7 +14,7 @@ class HomeScreen extends StatelessWidget {
       ),
       body: Column(
         children: [
-          Category('Members', Color(0XFFFA9532), () {
+          Category('Nembers', Color(0XFFFA9532), () {
             Navigator.push(context, MaterialPageRoute(builder: (context){
           return NumbersScreen();
             }));

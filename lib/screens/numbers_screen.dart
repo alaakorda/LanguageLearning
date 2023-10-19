@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
 
 class NumbersScreen extends StatelessWidget {
-  const NumbersScreen({Key? key}) : super(key: key);
+    NumbersScreen({Key? key}) : super(key: key);
+  final Numbers one =
+     Numbers(image: 'assets/images/numbers/number_one.png',
+      JpNum: 'ichi',
+      EnNum: 'one');
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -15,27 +19,28 @@ class NumbersScreen extends StatelessWidget {
         child: Row(
           children: [
             Padding(
-              padding: const EdgeInsets.only( right : 16.0),
+              padding: const EdgeInsets.only(right: 16.0),
               child: Container(
-               
-               color: Color(0XffFFF6DC),
-                child: Image(image: AssetImage('assets/images/numbers/number_one.png'),),
+                color: Color(0XffFFF6DC),
+                child: Image(
+                  image: AssetImage(one.image),
+                ),
               ),
             ),
             Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Text(
-                  'ichi',
+                  one.JpNum,
                   style: TextStyle(fontSize: 18, color: Colors.white),
                 ),
                 Text(
-                  'one',
+                  one.EnNum,
                   style: TextStyle(fontSize: 18, color: Colors.white),
                 ),
               ],
             ),
-             Spacer(flex : 1),
+            Spacer(flex: 1),
             Padding(
               padding: const EdgeInsets.only(right: 16),
               child: Icon(
@@ -49,4 +54,11 @@ class NumbersScreen extends StatelessWidget {
       ),
     );
   }
+}
+
+class Numbers {
+  final String image;
+  final String JpNum;
+  final String EnNum;
+  Numbers({required this.image, required this.JpNum, required this.EnNum});
 }

@@ -14,11 +14,13 @@ class NumbersScreen extends StatelessWidget {
         height: 100,
         child: Row(
           children: [
-            Container(
-              width: 50,
-              height: 50,
-             color: Color(0XffFFF6DC),
-              child: Image(image: AssetImage('assets/images/numbers/number_one.png')),
+            Padding(
+              padding: const EdgeInsets.only( right : 16.0),
+              child: Container(
+               
+               color: Color(0XffFFF6DC),
+                child: Image(image: AssetImage('assets/images/numbers/number_one.png'),),
+              ),
             ),
             Column(
               mainAxisAlignment: MainAxisAlignment.center,
@@ -33,7 +35,7 @@ class NumbersScreen extends StatelessWidget {
                 ),
               ],
             ),
-               Spacer(flex:1),
+             Spacer(flex : 1),
             Padding(
               padding: const EdgeInsets.only(right: 16),
               child: Icon(

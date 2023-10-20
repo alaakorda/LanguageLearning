@@ -15,7 +15,12 @@ class NumbersScreen extends StatelessWidget {
         title: Text('Numbers'),
         backgroundColor: Color(0xFF4A322B),
       ),
-      body: Item(number: one),
+      body:
+       Column(
+         children: [
+           Item(number: one),
+         ],
+       ),
     );
   }
 }

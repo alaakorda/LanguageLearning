@@ -6,48 +6,44 @@ class Item extends StatelessWidget {
   final Numbers number;
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        Container(
-          color: Color(0XFFFA9532),
-          height: 100,
-          child: Row(
+    return Container(
+      color: Color(0XFFFA9532),
+      height: 100,
+      child: Row(
+        children: [
+          Padding(
+            padding: const EdgeInsets.only(right: 16.0),
+            child: Container(
+              color: Color(0XffFFF6DC),
+              child: Image(
+                image: AssetImage(number.image),
+              ),
+            ),
+          ),
+          Column(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Padding(
-                padding: const EdgeInsets.only(right: 16.0),
-                child: Container(
-                  color: Color(0XffFFF6DC),
-                  child: Image(
-                    image: AssetImage(number.image),
-                  ),
-                ),
+              Text(
+                number.JpNum,
+                style: TextStyle(fontSize: 18, color: Colors.white),
               ),
-              Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Text(
-                    number.JpNum,
-                    style: TextStyle(fontSize: 18, color: Colors.white),
-                  ),
-                  Text(
-                    number.EnNum,
-                    style: TextStyle(fontSize: 18, color: Colors.white),
-                  ),
-                ],
-              ),
-              Spacer(flex: 1),
-              Padding(
-                padding: const EdgeInsets.only(right: 16),
-                child: Icon(
-                  Icons.play_arrow,
-                  color: Colors.white,
-                  size: 30,
-                ),
+              Text(
+                number.EnNum,
+                style: TextStyle(fontSize: 18, color: Colors.white),
               ),
             ],
           ),
-        ),
-      ],
+          Spacer(flex: 1),
+          Padding(
+            padding: const EdgeInsets.only(right: 16),
+            child: Icon(
+              Icons.play_arrow,
+              color: Colors.white,
+              size: 30,
+            ),
+          ),
+        ],
+      ),
     );
   }
 }

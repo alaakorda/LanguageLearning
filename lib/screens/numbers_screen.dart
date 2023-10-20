@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:languagelearning/components/item.dart';
+import 'package:languagelearning/models/numbers.dart';
 
 class NumbersScreen extends StatelessWidget {
     NumbersScreen({Key? key}) : super(key: key);
@@ -13,52 +15,9 @@ class NumbersScreen extends StatelessWidget {
         title: Text('Numbers'),
         backgroundColor: Color(0xFF4A322B),
       ),
-      body: Container(
-        color: Color(0XFFFA9532),
-        height: 100,
-        child: Row(
-          children: [
-            Padding(
-              padding: const EdgeInsets.only(right: 16.0),
-              child: Container(
-                color: Color(0XffFFF6DC),
-                child: Image(
-                  image: AssetImage(one.image),
-                ),
-              ),
-            ),
-            Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Text(
-                  one.JpNum,
-                  style: TextStyle(fontSize: 18, color: Colors.white),
-                ),
-                Text(
-                  one.EnNum,
-                  style: TextStyle(fontSize: 18, color: Colors.white),
-                ),
-              ],
-            ),
-            Spacer(flex: 1),
-            Padding(
-              padding: const EdgeInsets.only(right: 16),
-              child: Icon(
-                Icons.play_arrow,
-                color: Colors.white,
-                size: 30,
-              ),
-            ),
-          ],
-        ),
-      ),
+      body: Item(number: one),
     );
   }
 }
 
-class Numbers {
-  final String image;
-  final String JpNum;
-  final String EnNum;
-  Numbers({required this.image, required this.JpNum, required this.EnNum});
-}
+

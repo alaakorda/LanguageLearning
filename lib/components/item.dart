@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:languagelearning/models/numbers.dart';
+import 'package:audioplayers/audioplayers.dart';
 
 class Item extends StatelessWidget {
   const Item({Key? key, required this.number}) : super(key: key);
@@ -7,14 +8,14 @@ class Item extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Color(0XFFFA9532),
+      color: const Color(0XFFFA9532),
       height: 100,
       child: Row(
         children: [
           Padding(
             padding: const EdgeInsets.only(right: 16.0),
             child: Container(
-              color: Color(0XffFFF6DC),
+              color: const Color(0XffFFF6DC),
               child: Image(
                 image: AssetImage(number.image),
               ),
@@ -25,22 +26,29 @@ class Item extends StatelessWidget {
             children: [
               Text(
                 number.JpNum,
-                style: TextStyle(fontSize: 18, color: Colors.white),
+                style: const TextStyle(fontSize: 18, color: Colors.white),
               ),
               Text(
                 number.EnNum,
-                style: TextStyle(fontSize: 18, color: Colors.white),
+                style: const TextStyle(fontSize: 18, color: Colors.white),
               ),
             ],
           ),
-          Spacer(flex: 1),
+          const Spacer(flex: 1),
           Padding(
             padding: const EdgeInsets.only(right: 16),
-            child: Icon(
-              Icons.play_arrow,
-              color: Colors.white,
-              size: 30,
-            ),
+            child: IconButton(
+                splashColor: Colors.black,
+                onPressed: () {
+                  final player = AudioPlayer();
+                  player.play(
+                      AssetSource(number.sound));
+                },
+                icon: const Icon(
+                  Icons.play_arrow,
+                  color: Colors.white,
+                  size: 30,
+                )),
           ),
         ],
       ),

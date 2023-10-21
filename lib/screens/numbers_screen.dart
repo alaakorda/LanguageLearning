@@ -7,51 +7,62 @@ class NumbersScreen extends StatelessWidget {
   final List<Numbers> numbers = [
     Numbers(
         image: 'assets/images/numbers/number_one.png',
-        JpNum: 'Ichi',
-        EnNum: 'One'),
+        JpNum: 'ichi',
+        EnNum: 'One',
+        sound: 'sounds/numbers/number_one_sound.mp3'
+        ),
     Numbers(
         image: 'assets/images/numbers/number_two.png',
         JpNum: 'Ni',
-        EnNum: 'Two'),
+        EnNum: 'Two',
+        sound: 'sounds/numbers/number_two_sound.mp3'),
     Numbers(
         image: 'assets/images/numbers/number_three.png',
         JpNum: 'San',
-        EnNum: 'Three'),
+        EnNum: 'Three',
+        sound: 'sounds/numbers/number_three_sound.mp3'),
     Numbers(
         image: 'assets/images/numbers/number_four.png',
         JpNum: 'Shi',
-        EnNum: 'Four'),
+        EnNum: 'Four',
+        sound: 'sounds/numbers/number_four_sound.mp3'),
     Numbers(
         image: 'assets/images/numbers/number_five.png',
         JpNum: 'Go',
-        EnNum: 'Five'),
+        EnNum: 'Five',
+        sound: 'sounds/numbers/number_five_sound.mp3'),
     Numbers(
         image: 'assets/images/numbers/number_six.png',
         JpNum: 'Roku',
-        EnNum: 'Six'),
+        EnNum: 'Six',
+        sound: 'sounds/numbers/number_six_sound.mp3'),
     Numbers(
         image: 'assets/images/numbers/number_seven.png',
         JpNum: 'Sebun',
-        EnNum: 'Seven'),
+        EnNum: 'Seven',
+        sound: 'sounds/numbers/number_seven_sound.mp3'),
     Numbers(
         image: 'assets/images/numbers/number_eight.png',
         JpNum: 'Hachi',
-        EnNum: 'Eight'),
+        EnNum: 'Eight',
+        sound: 'sounds/numbers/number_eight_sound.mp3'),
     Numbers(
         image: 'assets/images/numbers/number_nine.png',
         JpNum: 'Kyu',
-        EnNum: 'Nine'),
+        EnNum: 'Nine',
+        sound: 'sounds/numbers/number_nine_sound.mp3'),
     Numbers(
         image: 'assets/images/numbers/number_ten.png',
         JpNum: 'Ju',
-        EnNum: 'Ten'),
+        EnNum: 'Ten',
+        sound: 'sounds/numbers/number_ten_sound.mp3'),
   ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Numbers'),
-        backgroundColor: Color(0xFF4A322B),
+        title: const Text('Numbers'),
+        backgroundColor: const Color(0xFF4A322B),
       ),
       body: ListView.builder(
           itemCount: numbers.length,

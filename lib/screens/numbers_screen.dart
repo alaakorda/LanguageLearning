@@ -4,7 +4,7 @@ import 'package:languagelearning/models/numbers.dart';
 
 class NumbersScreen extends StatelessWidget {
   NumbersScreen({Key? key}) : super(key: key);
-  final List<Numbers> numbers = [
+  final List<Numbers> numbers =  [
     Numbers(
         image: 'assets/images/numbers/number_one.png',
         JpNum: 'ichi',
@@ -65,7 +65,7 @@ class NumbersScreen extends StatelessWidget {
         backgroundColor: const Color(0xFF4A322B),
       ),
       body: ListView.builder(
-          itemCount: numbers.length,
+         itemCount: numbers.length,
           itemBuilder: (context, index) {
             return Item(
               number: numbers[index],

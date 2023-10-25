@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:languagelearning/components/category_item.dart';
+import 'package:languagelearning/screens/colors_screen.dart';
+import 'package:languagelearning/screens/familymembers_screen.dart';
 import 'package:languagelearning/screens/numbers_screen.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -19,8 +21,16 @@ class HomeScreen extends StatelessWidget {
               return NumbersScreen();
             }));
           }),
-          Category('Family Members', Color(0XFF5A8345), () {}),
-          Category('Colors', Color(0XFF7E3FA3), () {}),
+          Category('Family Members', Color(0XFF5A8345), () {
+            Navigator.push(context, MaterialPageRoute(builder: (context) {
+              return FamilyMembers();
+            }));
+          }),
+          Category('Colors', Color(0XFF7E3FA3), () {
+             Navigator.push(context, MaterialPageRoute(builder: (context) {
+              return ColorsScreen();
+            }));
+          }),
           Category('Phrases', Color(0XFF48A5CC), () {}),
         ],
       ),

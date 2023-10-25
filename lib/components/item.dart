@@ -3,12 +3,15 @@ import 'package:languagelearning/models/numbers.dart';
 import 'package:audioplayers/audioplayers.dart';
 
 class Item extends StatelessWidget {
-  const Item({Key? key, required this.number}) : super(key: key);
-  final Numbers number;
+  const Item({Key? key, required this.number, required this.color})
+      : super(key: key);
+  final ItemModel number;
+  final Color color;
+
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: const Color(0XFFFA9532),
+      color: color,
       height: 100,
       child: Row(
         children: [
@@ -41,8 +44,7 @@ class Item extends StatelessWidget {
                 splashColor: Colors.black,
                 onPressed: () {
                   final player = AudioPlayer();
-                  player.play(
-                      AssetSource(number.sound));
+                  player.play(AssetSource(number.sound));
                 },
                 icon: const Icon(
                   Icons.play_arrow,

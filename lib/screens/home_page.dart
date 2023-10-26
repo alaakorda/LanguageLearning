@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:languagelearning/components/category_item.dart';
+import 'package:languagelearning/screens/Phrases.dart';
 import 'package:languagelearning/screens/colors_screen.dart';
 import 'package:languagelearning/screens/familymembers_screen.dart';
 import 'package:languagelearning/screens/numbers_screen.dart';
@@ -31,7 +32,11 @@ class HomeScreen extends StatelessWidget {
               return ColorsScreen();
             }));
           }),
-          Category('Phrases', Color(0XFF48A5CC), () {}),
+          Category('Phrases', Color(0XFF48A5CC), () {
+              Navigator.push(context, MaterialPageRoute(builder: (context) {
+              return PhrasesScreen();
+            }));
+          }),
         ],
       ),
     );

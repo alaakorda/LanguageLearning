@@ -1,10 +1,11 @@
 class ItemModel {
-  final String image;
+   String? image;
   final String JpNum;
   final String EnNum;
   final String sound;
   ItemModel(
-      {required this.image,
+      {
+         this.image,
       required this.JpNum,
       required this.EnNum,
       required this.sound});

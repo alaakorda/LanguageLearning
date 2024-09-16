@@ -4,13 +4,13 @@ import 'package:languagelearning/components/pharses_item.dart';
 import 'package:languagelearning/models/numbers.dart';
 
 class PhrasesScreen extends StatelessWidget {
-   PhrasesScreen({Key? key}) : super(key: key);
+  PhrasesScreen({Key? key}) : super(key: key);
   final List<ItemModel> numbers = [
     ItemModel(
         JpNum: 'Kimasu ka',
         EnNum: 'are you coming',
         sound: 'sounds/phrases/are_you_coming.wav'),
-     ItemModel(
+    ItemModel(
         JpNum: 'Hai, kimasu',
         EnNum: 'yes im coming',
         sound: 'sounds/phrases/yes_im_coming.wav'),
@@ -42,8 +42,6 @@ class PhrasesScreen extends StatelessWidget {
         JpNum: 'Doko ni iku no',
         EnNum: 'where are you going',
         sound: 'sounds/phrases/where_are_you_going.wav'),
-  
-  
   ];
   @override
   Widget build(BuildContext context) {
@@ -53,12 +51,14 @@ class PhrasesScreen extends StatelessWidget {
         backgroundColor: const Color(0xFF4A322B),
       ),
       body: ListView.builder(
-          itemCount: numbers.length,
-          itemBuilder: (context, index) {
-            return PhrasesItem(number: numbers[index],
+        itemCount: numbers.length,
+        itemBuilder: (context, index) {
+          return PhrasesItem(
+            number: numbers[index],
             color: Color(0XFF48A5CC),
-            );
-          }),
+          );
+        },
+      ),
     );
   }
 }

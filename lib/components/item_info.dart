@@ -1,5 +1,6 @@
 import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/material.dart';
+
 class ItemInfo extends StatelessWidget {
   const ItemInfo({Key? key, required this.number}) : super(key: key);
   final number;
@@ -11,14 +12,15 @@ class ItemInfo extends StatelessWidget {
           padding: const EdgeInsets.only(left: 4),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
                 number.JpNum,
-                style: const TextStyle(fontSize: 18, color: Colors.white),
+                style: const TextStyle(fontSize: 15, color: Colors.white),
               ),
               Text(
                 number.EnNum,
-                style: const TextStyle(fontSize: 18, color: Colors.white),
+                style: const TextStyle(fontSize: 15, color: Colors.white),
               ),
             ],
           ),
